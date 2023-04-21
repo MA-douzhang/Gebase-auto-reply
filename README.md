@@ -1,4 +1,4 @@
-# yu-auto-reply 自动回复
+# Gebase-auto-reply 自动回复
 
 > 作者：[程序员鱼皮](https://github.com/liyupi)
 > 
@@ -62,6 +62,10 @@ zsxq:
   groupId: ${ZSXQ_GROUP_ID:你的星球id}
   # 是否提醒提问者
   silenced: ${ZSXQ_SILENCED:true}
+#伙伴校园
+gebase:
+  url: ${GEBASE_URL:ws://伙伴校园地址/api/webSocket/chatgpt}
+
 # 任务配置
 task:
   # 任务列表，支持配置多个
@@ -113,22 +117,13 @@ task:
 2）修改 `factory/AnswererFactory` 的 `createAnswerer` 方法，补充创建你自己的回答者
 
 
-## 免费 ChatGPT 交流群
+# 新增加伙伴校园自动回复
+项目地址：[伙伴校园](https://github.com/MA-douzhang/Gebase)
 
-![](doc/ChatGPT交流.png)
+1）修改配置中的地址
+```
+gebase:
+  url: ${GEBASE_URL:ws://伙伴校园地址/api/webSocket/回复账号}
+```
 
-
-## 欢迎贡献
-
-**作者平时非常忙** ，本项目也是仅用了几个小时抽空做的，开源出来给大家参考，但是 PR 和 Issues 响应不会很及时，感谢理解！
-
-如有项目本身的问题，欢迎提 issues 和 PR；
-
-如有编程方面的问题、或者需要项目教学，请看 [编程导航知识星球](https://yupi.icu)
-
-
-## 问答
-
-1）问：为什么先支持知识星球？
-
-答：因为 OpenAI 的 API 不是免费的，星球可以限制提问次数，防止刷接口
+2）需要创建一个账号为自动回复的账号
