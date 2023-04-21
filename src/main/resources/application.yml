@@ -14,7 +14,7 @@ server:
 # https://platform.openai.com/docs/api-reference
 openai:
   model: ${OPENAI_MODEL:text-davinci-003}
-  apiKey: ${OPENAI_API_KEY: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}
+  apiKey: ${OPENAI_API_KEY:openaikey}
 # 知识星球配置
 # https://zsxq.com/
 zsxq:
@@ -23,7 +23,7 @@ zsxq:
   # 是否提醒提问者
   silenced: ${ZSXQ_SILENCED:true}
 gebase:
-  url: ${GEBASE_URL:ws://124.71.138.38:9091/api/webSocket/chatgpt}
+  url: ${GEBASE_URL:ws://伙伴校园地址/api/webSocket/chatgpt}
 
 # 任务配置
 task:
