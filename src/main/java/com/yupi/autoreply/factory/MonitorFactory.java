@@ -2,6 +2,7 @@ package com.yupi.autoreply.factory;
 
 import com.yupi.autoreply.model.TaskListItem;
 import com.yupi.autoreply.monitor.DefaultMonitor;
+import com.yupi.autoreply.monitor.GebaseMonitor;
 import com.yupi.autoreply.monitor.Monitor;
 import com.yupi.autoreply.monitor.ZsxqMonitor;
 
@@ -24,6 +25,8 @@ public class MonitorFactory {
         switch (monitor) {
             case "zsxq":
                 return new ZsxqMonitor(taskListItem);
+            case "gebase":
+                return new GebaseMonitor(taskListItem);
             default:
                 return new DefaultMonitor(taskListItem);
         }

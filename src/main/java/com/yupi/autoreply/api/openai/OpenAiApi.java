@@ -32,7 +32,7 @@ public class OpenAiApi {
         }
         String url = "https://api.openai.com/v1/completions";
         String json = JSONUtil.toJsonStr(request);
-        String result = HttpRequest.post(url)
+        String result = HttpRequest.post(url).setHttpProxy("127.0.0.1",7890)
                 .header("Authorization", "Bearer " + openAiApiKey)
                 .body(json)
                 .execute()
